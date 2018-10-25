@@ -26,6 +26,7 @@
     "@nestjs/typeorm": "^5.2.2",
     "dotenv": "^6.1.0",
     "joi": "^14.0.1",
+    "nest-schedule": "^0.4.3",
     "pg": "^7.5.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.2.2",
