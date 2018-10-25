@@ -53,9 +53,5 @@ describe('ConfigService', () => {
     it('should expose postgres settings', () => {
       expect(service.postgres).toBeDefined();
     });
-
-    it('should expose stomp settings', () => {
-      expect(service.stomp).toBeDefined();
-    });
   });
 });
