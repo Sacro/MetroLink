@@ -43,6 +43,8 @@ export class ConfigService {
       POSTGRES_USER: Joi.string(),
       POSTGRES_PASSWORD: Joi.string(),
       POSTGRES_DATABASE: Joi.string(),
+
+      TFGM_API_KEY: Joi.string(),
     }).options({
       presence: envConfig.NODE_ENV === 'test' ? 'optional' : 'required',
       stripUnknown: true,
@@ -83,5 +85,9 @@ export class ConfigService {
       password: this.envConfig.POSTGRES_PASSWORD,
       database: this.envConfig.POSTGRES_DATABASE,
     };
+  }
+
+  get tfgmApiKey() {
+    return this.envConfig.TFGM_API_KEY;
   }
 }

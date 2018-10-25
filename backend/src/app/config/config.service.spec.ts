@@ -53,5 +53,9 @@ describe('ConfigService', () => {
     it('should expose postgres settings', () => {
       expect(service.postgres).toBeDefined();
     });
+
+    it('should expose TFGM Api key', () => {
+      expect(service.tfgmApiKey).toBeString();
+    });
   });
 });
