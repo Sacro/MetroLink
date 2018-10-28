@@ -6,6 +6,8 @@ import { MetrolinkResponse, MetrolinkOdataResponse } from './entities';
 
 @Injectable()
 export class MetrolinkReceiverService {
+  lastResponse: MetrolinkResponse[];
+
   constructor(
     private readonly config: ConfigService,
     private readonly http: HttpService,
@@ -17,7 +19,7 @@ export class MetrolinkReceiverService {
         headers: { 'Ocp-Apim-Subscription-Key': this.config.tfgmApiKey },
       })
       .pipe(
-        map(res => res.data.value),
+        map(res => res.data.value as MetrolinkResponse[]),
         // map(res => {
         //   res.map(r => (r.LastUpdated = null));
         //   return res;
