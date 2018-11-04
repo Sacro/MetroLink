@@ -24,10 +24,14 @@
   "dependencies": {
     "@nestjs/common": "^5.1.0",
     "@nestjs/core": "^5.1.0",
+    "@nestjs/graphql": "^5.4.0",
     "@nestjs/typeorm": "^5.2.2",
+    "apollo-server-express": "^2.1.0",
     "class-transformer": "^0.1.10",
     "class-validator": "^0.9.1",
     "dotenv": "^6.1.0",
+    "graphql": "^14.0.2",
+    "graphql-tools": "^4.0.3",
     "joi": "^14.0.1",
     "luxon": "^1.5.0",
     "nest-schedule": "^0.4.3",
@@ -36,6 +40,7 @@
     "rxjs": "^6.2.2",
     "stompit": "^0.26.0",
     "stompjs": "^2.3.3",
+    "type-graphql": "^0.15.0",
     "typeorm": "^0.2.8",
     "typescript": "^3.0.1"
   },
