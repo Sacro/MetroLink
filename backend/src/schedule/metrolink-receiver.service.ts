@@ -20,10 +20,10 @@ export class MetrolinkReceiverService {
       })
       .pipe(
         map(res => res.data.value as MetrolinkResponse[]),
-        // map(res => {
-        //   res.map(r => (r.LastUpdated = null));
-        //   return res;
-        // }),
+        map(res => {
+          res.map(r => (r.LastUpdated = null));
+          return res;
+        }),
       );
   }
 }
