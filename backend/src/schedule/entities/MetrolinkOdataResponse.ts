@@ -1,6 +1,6 @@
 import { MetrolinkResponse } from './MetrolinkResponse';
 
-export interface Welcome {
+export interface MetrolinkOdataResponse {
   '@odata.context': string;
   value: MetrolinkResponse[];
 }
