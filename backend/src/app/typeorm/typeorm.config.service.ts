@@ -15,7 +15,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
         : ['src/**/**.entity{.ts,.js}'],
       logging: ['error', 'info', 'log', 'query', 'schema', 'warn'],
       logger: 'advanced-console',
-      synchronize: false,
+      synchronize: false, // this.config.isDevEnvironment,
     };
   }
 }

@@ -1,5 +1,6 @@
 require('dotenv').parse('.env');
 
+// tslint:disable:object-literal-sort-keys
 module.exports = {
   type: 'postgres',
   host: process.env.POSTGRES_HOST,
