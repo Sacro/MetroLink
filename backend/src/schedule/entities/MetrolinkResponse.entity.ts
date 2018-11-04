@@ -1,8 +1,8 @@
-import { BaseEntity, Column, Entity, PrimaryColumn } from 'typeorm';
-import { Carriages, Dest, Direction, Line, Status } from '.';
+import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Carriages, Direction, Line, Status } from '.';
 
 @Entity()
-export class MetrolinkResponse extends BaseEntity {
+export class MetrolinkResponse {
   @PrimaryColumn()
   Id: number;
 
@@ -28,10 +28,8 @@ export class MetrolinkResponse extends BaseEntity {
   })
   Direction: Direction;
 
-  @Column('enum', {
-    enum: Dest,
-  })
-  Dest0: Dest;
+  @Column()
+  Dest0: string;
 
   @Column('enum', {
     enum: Carriages,
@@ -46,10 +44,8 @@ export class MetrolinkResponse extends BaseEntity {
   @Column()
   Wait0: string;
 
-  @Column('enum', {
-    enum: Dest,
-  })
-  Dest1: Dest;
+  @Column()
+  Dest1: string;
 
   @Column('enum', {
     enum: Carriages,
@@ -64,10 +60,8 @@ export class MetrolinkResponse extends BaseEntity {
   @Column()
   Wait1: string;
 
-  @Column('enum', {
-    enum: Dest,
-  })
-  Dest2: Dest;
+  @Column()
+  Dest2: string;
 
   @Column('enum', {
     enum: Carriages,
@@ -82,10 +76,8 @@ export class MetrolinkResponse extends BaseEntity {
   @Column()
   Wait2: string;
 
-  @Column('enum', {
-    enum: Dest,
-  })
-  Dest3: Dest;
+  @Column()
+  Dest3: string;
 
   @Column('enum', {
     enum: Carriages,
@@ -103,6 +95,6 @@ export class MetrolinkResponse extends BaseEntity {
   @Column()
   Wait3: string;
 
-  @Column()
+  @Column('timestamp')
   LastUpdated: string;
 }

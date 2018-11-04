@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { TypeOrmOptionsFactory, TypeOrmModuleOptions } from '@nestjs/typeorm';
+import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { ConfigService } from '../config/config.service';
+import { TypeormLoggerService } from './typeorm.logger.service';
 
 @Injectable()
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
@@ -13,9 +14,8 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       entities: this.config.isProdEnvironment
         ? ['dist/**/**.entity{.ts,.js}']
         : ['src/**/**.entity{.ts,.js}'],
-      logging: ['error', 'info', 'log', 'query', 'schema', 'warn'],
-      logger: 'advanced-console',
-      synchronize: false, // this.config.isDevEnvironment,
+      logging: this.config.isDevEnvironment ? 'all' : ['error'],
+      logger: new TypeormLoggerService(),
     };
   }
 }

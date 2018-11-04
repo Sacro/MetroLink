@@ -1,14 +1,11 @@
 import { HttpModule, Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { MetrolinkResponse } from './entities';
 import { MetrolinkHandlerService } from './metrolink-handler.service';
 import { MetrolinkReceiverService } from './metrolink-receiver.service';
-import { ScheduleService } from './schedule.service';
 
 @Module({
-  imports: [HttpModule],
-  providers: [
-    MetrolinkHandlerService,
-    MetrolinkReceiverService,
-    ScheduleService,
-  ],
+  imports: [HttpModule, TypeOrmModule.forFeature([MetrolinkResponse])],
+  providers: [MetrolinkHandlerService, MetrolinkReceiverService],
 })
 export class ScheduleModule {}

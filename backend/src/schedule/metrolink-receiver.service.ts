@@ -1,4 +1,5 @@
 import { HttpService, Injectable } from '@nestjs/common';
+import { DateTime, Zone } from 'luxon';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ConfigService } from '../app/config/config.service';
@@ -21,9 +22,14 @@ export class MetrolinkReceiverService {
       .pipe(
         map(res => res.data.value as MetrolinkResponse[]),
         map(res => {
-          res.map(r => (r.LastUpdated = null));
+          res.map(
+            r =>
+              (r.LastUpdated = DateTime.local()
+                .setZone('Europe/London')
+                .toLocaleString(DateTime.DATETIME_FULL)),
+          );
           return res;
-        }),
+        }), // * /
       );
   }
 }
