@@ -14,8 +14,8 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       entities: this.config.isProdEnvironment
         ? ['dist/**/**.entity{.ts,.js}']
         : ['src/**/**.entity{.ts,.js}'],
-      logging: this.config.isDevEnvironment ? 'all' : ['error'],
-      logger: new TypeormLoggerService(),
+      logging: ['error'],
+      // logger: new TypeormLoggerService(),
     };
   }
 }

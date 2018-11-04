@@ -4,10 +4,12 @@ import { Interval, NestSchedule } from 'nest-schedule';
 import { Repository } from 'typeorm';
 import { MetrolinkResponse } from './entities';
 import { MetrolinkReceiverService } from './metrolink-receiver.service';
+import { PubSubService } from 'app/pubsub/pubsub.service';
 
 @Injectable()
 export class MetrolinkHandlerService extends NestSchedule {
   constructor(
+    private readonly pubsubService: PubSubService,
     private readonly receiverService: MetrolinkReceiverService,
     @InjectRepository(MetrolinkResponse)
     private readonly repository: Repository<MetrolinkResponse>,
@@ -28,7 +30,7 @@ export class MetrolinkHandlerService extends NestSchedule {
       this.repository
         .save(response)
         .then(result => {
-          // Logger.log(result.Id);
+          this.pubsubService.pubsub.publish('updatedResponse', result);
         })
         .catch(reason => {
           Logger.error(reason);
