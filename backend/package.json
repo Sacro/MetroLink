@@ -21,6 +21,9 @@
     "typeorm": "ts-node ./node_modules/.bin/typeorm",
     "webpack": "webpack --config webpack.config.js"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "dependencies": {
     "@nestjs/common": "^5.1.0",
     "@nestjs/core": "^5.1.0",
