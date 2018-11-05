@@ -6,7 +6,7 @@ import { PubSubService } from './pubsub.service';
   providers: [
     {
       provide: PubSubService,
-      useValue: new PubSubService(),
+      useClass: PubSubService,
     },
   ],
   exports: [PubSubService],

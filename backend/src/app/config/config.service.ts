@@ -44,6 +44,13 @@ export class ConfigService {
       POSTGRES_PASSWORD: Joi.string(),
       POSTGRES_DATABASE: Joi.string(),
 
+      REDIS_HOST: Joi.string()
+        .default('localhost')
+        .optional(),
+      REDIS_PORT: Joi.number()
+        .default(6379)
+        .optional(),
+
       TFGM_API_KEY: Joi.string(),
     }).options({
       presence: envConfig.NODE_ENV === 'test' ? 'optional' : 'required',
@@ -84,6 +91,13 @@ export class ConfigService {
       username: this.envConfig.POSTGRES_USER,
       password: this.envConfig.POSTGRES_PASSWORD,
       database: this.envConfig.POSTGRES_DATABASE,
+    };
+  }
+
+  get redis() {
+    return {
+      host: this.envConfig.REDIS_HOST,
+      port: +this.envConfig.REDIS_PORT,
     };
   }
 

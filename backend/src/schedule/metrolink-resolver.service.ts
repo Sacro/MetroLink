@@ -1,9 +1,8 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { Resolver } from '@nestjs/graphql';
 import { InjectRepository } from '@nestjs/typeorm';
-import { PubSubService } from 'app/pubsub/pubsub.service';
-import { Arg, Int, Query, Subscription, Root, Args } from 'type-graphql';
+import { Arg, Int, Query, Resolver, Root, Subscription } from 'type-graphql';
 import { Repository } from 'typeorm';
+import { PubSubService } from '../app/pubsub/pubsub.service';
 import { MetrolinkResponse } from './entities';
 
 @Injectable()
@@ -32,8 +31,9 @@ export class MetrolinkResolverService {
   @Subscription(_returns => MetrolinkResponse, {
     topics: 'updatedResponse',
   })
-  async updatedResponse(@Root() payload: MetrolinkResponse) {
-    Logger.log(`Payload: ${payload}`);
+  async updatedResponse(
+    @Root() payload: MetrolinkResponse,
+  ): Promise<MetrolinkResponse> {
     return payload;
   }
 }

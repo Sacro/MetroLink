@@ -1,11 +1,21 @@
 import { Injectable } from '@nestjs/common';
-import { PubSub, PubSubEngine, PubSubOptions } from 'graphql-subscriptions';
+import { RedisPubSub } from 'graphql-redis-subscriptions';
+import * as Redis from 'ioredis';
+import { ConfigService } from '../../app/config/config.service';
 
 @Injectable()
 export class PubSubService {
-  readonly pubsub: PubSub;
+  readonly pubsub: RedisPubSub;
 
-  constructor() {
-    this.pubsub = new PubSub();
+  constructor(private readonly config: ConfigService) {
+    const options: Redis.RedisOptions = {
+      host: this.config.redis.host,
+      port: this.config.redis.port,
+    };
+
+    this.pubsub = new RedisPubSub({
+      publisher: new Redis(options),
+      subscriber: new Redis(options),
+    });
   }
 }

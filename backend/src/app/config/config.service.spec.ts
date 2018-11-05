@@ -54,6 +54,10 @@ describe('ConfigService', () => {
       expect(service.postgres).toBeDefined();
     });
 
+    it('should expose redis settings', () => {
+      expect(service.redis).toBeDefined();
+    });
+
     it('should expose TFGM Api key', () => {
       expect(service.tfgmApiKey).toBeString();
     });

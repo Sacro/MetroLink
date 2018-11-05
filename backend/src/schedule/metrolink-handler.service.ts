@@ -2,9 +2,9 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Interval, NestSchedule } from 'nest-schedule';
 import { Repository } from 'typeorm';
+import { PubSubService } from '../app/pubsub/pubsub.service';
 import { MetrolinkResponse } from './entities';
 import { MetrolinkReceiverService } from './metrolink-receiver.service';
-import { PubSubService } from 'app/pubsub/pubsub.service';
 
 @Injectable()
 export class MetrolinkHandlerService extends NestSchedule {
