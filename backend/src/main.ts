@@ -1,8 +1,9 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { ConfigService } from 'app/config/config.service';
-import { GraphqlConfigService } from 'app/graphql/graphql.config.service';
+
 import { AppModule } from './app/app.module';
+import { GraphqlConfigService } from './app/graphql/graphql.config.service';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
