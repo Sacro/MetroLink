@@ -50,7 +50,7 @@
   },
   "devDependencies": {
     "@nestjs/testing": "^5.4.0",
-    "@types/dotenv": "^4.0.3",
+    "@types/dotenv": "^6.1.0",
     "@types/express": "^4.16.0",
     "@types/ioredis": "^4.0.3",
     "@types/jest": "^23.3.1",
@@ -67,7 +67,7 @@
     "nodemon": "^1.18.3",
     "prettier": "^1.14.2",
     "rimraf": "^2.6.2",
-    "stryker": "^0.30.0",
+    "stryker": "^0.32.0",
     "stryker-api": "^0.21.4",
     "stryker-baseline-reporter": "^1.0.3",
     "stryker-html-reporter": "^0.16.5",
