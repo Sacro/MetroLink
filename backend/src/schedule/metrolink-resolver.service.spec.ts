@@ -1,6 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ConfigService } from '../app/config/config.service';
-import { PubSubService } from '../app/pubsub/pubsub.service';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+
+import { MetrolinkResponse } from './entities';
 import { MetrolinkResolverService } from './metrolink-resolver.service';
 
 describe('MetrolinkResolverService', () => {
@@ -8,8 +10,14 @@ describe('MetrolinkResolverService', () => {
 
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [ConfigService, PubSubService],
-      providers: [MetrolinkResolverService],
+      imports: [],
+      providers: [
+        {
+          provide: getRepositoryToken(MetrolinkResponse),
+          useClass: Repository,
+        },
+        MetrolinkResolverService,
+      ],
     }).compile();
     service = module.get<MetrolinkResolverService>(MetrolinkResolverService);
   });

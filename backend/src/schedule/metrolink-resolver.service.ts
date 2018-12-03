@@ -2,14 +2,12 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Arg, Int, Query, Resolver, Root, Subscription } from 'type-graphql';
 import { Repository } from 'typeorm';
-import { PubSubService } from '../app/pubsub/pubsub.service';
 import { MetrolinkResponse } from './entities';
 
 @Injectable()
 @Resolver()
 export class MetrolinkResolverService {
   constructor(
-    private readonly pubSubService: PubSubService,
     @InjectRepository(MetrolinkResponse)
     private readonly repository: Repository<MetrolinkResponse>,
   ) {
