@@ -3,9 +3,9 @@
 
 
 "@apollographql/apollo-tools@^0.2.6":
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/@apollographql/apollo-tools/-/apollo-tools-0.2.8.tgz#f755baa3576eabdd93afa2782be61f5ae8a856dc"
-  integrity sha512-A7FTUigtpGCFBaLT1ILicdjM6pZ7LQNw7Vgos0t4aLYtvlKO/L1nMi/NO7bPypzZaJSToTgcxHJPRydP1Md+Kw==
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/@apollographql/apollo-tools/-/apollo-tools-0.2.9.tgz#1e20999d11728ef47f8f812f2be0426b5dde1a51"
+  integrity sha512-AEIQwPkS0QLbkpb6WyRhV4aOMxuErasp47ABv5niDKOasQH8mrD8JSGKJAHuQxVe4kB8DE9sLRoc5qeQ0KFCHA==
   dependencies:
     apollo-env "0.2.5"
 
@@ -136,9 +136,9 @@
     glob-to-regexp "^0.3.0"
 
 "@nestjs/common@^5.1.0":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.4.1.tgz#7caef567c0aa116086c4785b48ce6df43194bc9d"
-  integrity sha512-05XsPaqte1Y8IHDSjMpxR3hfTEJfFcpfC/Ko81r+aUAFhxO8d4oYUzZl8Wob4zeJY6+nmLpuF8jtGeb/X73qiQ==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.5.0.tgz#6427d440f96e23c38945620fd74cb6ec61da8224"
+  integrity sha512-Ifh1D4ypsJYs/3YBIocU+X5yuAZSVKuCsz8kaKB4ZUO5WwJjh4/x6hlr4A+9XUMe8fPLtYXVohJoRUU5HbwyIA==
   dependencies:
     axios "0.18.0"
     cli-color "1.2.0"
@@ -147,9 +147,9 @@
     uuid "3.3.2"
 
 "@nestjs/core@^5.1.0":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-5.4.1.tgz#81838cdc5b82396464b1c1589da585915513854b"
-  integrity sha512-PAlSEsycXPIdVm1GOeghs0co8cUmMX65FPjzBLtRJKKcPS8YM7Xo3WKd2f2oGMACYNXbulLk8rWN0xTO2HTgww==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-5.5.0.tgz#4f80bcfda1b964a6e1702c32f0afcbcc4a1706f7"
+  integrity sha512-XPUjSJyex6KMdTUKK1oeD7ea9mNLcwlSEbcKV7OWaNHIVq/XJaFpbzjbmd+/U/ZZaO1IWhpisfLW9gr/O8eb4w==
   dependencies:
     "@nuxtjs/opencollective" "0.1.0"
     body-parser "1.18.3"
@@ -175,9 +175,9 @@
     uuid "3.3.2"
 
 "@nestjs/testing@^5.4.0":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.4.1.tgz#724843bfca0a8f65d1b8fb317bb7053d8e9d9af0"
-  integrity sha512-sQNTkRz6PvhNDCKRZlF1lYkCKgIV+3Zuu+Ui4Kn1xmVwrgSsjPajmigGtgBCPiK0ozCQtCZtOMQ2ROGb1NjKyw==
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-5.5.0.tgz#4a77d78d100a1865668a671a792c13844f7ff43e"
+  integrity sha512-dz6JLD5CTGx4hw5xm1ueLyxdbaO8asjKnyWlnW3ry7u+wqr1YhBnxxD5akNlEEbPa1GcT3qSXgiZycfclEalNA==
   dependencies:
     deprecate "1.0.0"
     optional "0.1.4"
@@ -393,9 +393,9 @@
   integrity sha512-Pr+6JRiKkfsFvmU/LK68oBRCQeEg36TyAbPhc2xpez24OOZZCuoIhWGTd39VZy6nGafSbxzGouFPTFD/rR1A0A==
 
 "@types/range-parser@*":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.2.tgz#fa8e1ad1d474688a757140c91de6dace6f4abc8d"
-  integrity sha512-HtKGu+qG1NPvYe1z7ezLsyIaXYyi8SoAVqWDZgDQ8dLrsZvSzUNCwZyfX33uhWxL/SU0ZDQZ3nwZ0nimt507Kw==
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
+  integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
 
 "@types/serve-static@*":
   version "1.13.2"
@@ -421,17 +421,17 @@
     "@types/node" "*"
 
 "@types/superagent@*":
-  version "3.8.5"
-  resolved "https://registry.yarnpkg.com/@types/superagent/-/superagent-3.8.5.tgz#a8eb8ec5bce0234e50d6b8bee1941b5bb5686e2d"
-  integrity sha512-h7dQyzEGQFY3Ya8pIu0fxcWaMWC2DDSKR78gHrh6GVnXUqXo/+93wd4RObXA13rKp4ETyym3yq2A0AxROx9AxQ==
+  version "3.8.4"
+  resolved "https://registry.yarnpkg.com/@types/superagent/-/superagent-3.8.4.tgz#24a5973c7d1a9c024b4bbda742a79267c33fb86a"
+  integrity sha512-Dnh0Iw6NO55z1beXvlsvUrfk4cd9eL2nuTmUk+rAhSVCk10PGGFbqCCTwbau9D0d2W3DITiXl4z8VCqppGkMPQ==
   dependencies:
     "@types/cookiejar" "*"
     "@types/node" "*"
 
 "@types/supertest@^2.0.5":
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/@types/supertest/-/supertest-2.0.7.tgz#46ff6508075cd4519736be060f0d6331a5c8ca7b"
-  integrity sha512-GibTh4OTkal71btYe2fpZP/rVHIPnnUsYphEaoywVHo+mo2a/LhlOFkIm5wdN0H0DA0Hx8x+tKgCYMD9elHu5w==
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/@types/supertest/-/supertest-2.0.6.tgz#a0665350c0e36315e1bccdf4785f2b76fcb71b6b"
+  integrity sha512-qRvPP8dO7IBqJz8LaQ7/Lw2oo/geiDUPAMx/L+CQCkR9sN622O30XCH7RSyUmilyCSyjxyhJ7cEtd3hmwPwvhw==
   dependencies:
     "@types/superagent" "*"
 
@@ -5003,9 +5003,9 @@ minipass@^2.2.1, minipass@^2.3.4:
     yallist "^3.0.0"
 
 minizlib@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.0.tgz#59517387478fd98d8017ed0299c6cb16cbd12da3"
-  integrity sha512-vQhkoouK/oKRVuFJynustmW3wrqZEXOrfbVVirvOVeglH4TNvIkcqiyojlIbbZYYDJZSbEKEXmDudg+tyRkm6g==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.1.tgz#dd27ea6136243c7c880684e8672bb3a45fd9b614"
+  integrity sha512-7+4oTUOWKg7AuL3vloEWekXY2/D20cevzsrNT2kGWm+39J9hGTCBv8VI5Pm5lXZ/o3/mdR4f8rflAPhnQb8mPA==
   dependencies:
     minipass "^2.2.1"
 
