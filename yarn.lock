@@ -1085,10 +1085,77 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@stryker-mutator/util@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@stryker-mutator/util/-/util-0.1.0.tgz#da8a8d6e5f4fd616efa1211b3f1cf20164b22bbe"
-  integrity sha512-1hdU/FV5vkBeIfkBjoNC5AUGEZYvxkjKHBvRgAqoSvMQ0X0hfZXCB1eXdOIW2CbZj6/IlSxVvBwBejAsFXDfmw==
+"@stryker-mutator/api@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/api/-/api-1.1.0.tgz#d33ff4ca43e171dd42e2680717671b958a4df6e4"
+  integrity sha512-8qOiRql306gw5ekyOksDgwcAiNiRlUTttc4My0y9kpzc2lW2Gda8iww2Ww0SaclPuiJXTTVuesuAFh8VUP7mfQ==
+  dependencies:
+    tslib "~1.9.3"
+
+"@stryker-mutator/core@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/core/-/core-1.1.0.tgz#3c7a2ed2cc4369d692b1930a4a6aa8beb6760935"
+  integrity sha512-snmLmywy6LALcNg/uKMTxC+rV39AXn0nbT3hGsoknafTIq6NT4wuqrbOuxCGw5XIMAiwCnixMlyoJqXQEOTwug==
+  dependencies:
+    "@stryker-mutator/api" "^1.1.0"
+    "@stryker-mutator/util" "^1.1.0"
+    chalk "~2.4.1"
+    commander "~2.19.0"
+    get-port "~4.1.0"
+    glob "~7.1.2"
+    inquirer "~6.2.0"
+    istanbul-lib-instrument "~3.1.0"
+    lodash "~4.17.4"
+    log4js "~4.0.2"
+    mkdirp "~0.5.1"
+    prettier "~1.16.1"
+    progress "~2.0.0"
+    rimraf "~2.6.1"
+    rxjs "~6.3.0"
+    source-map "~0.6.1"
+    surrial "~1.0.0"
+    tree-kill "~1.2.0"
+    tslib "~1.9.3"
+    typed-inject "~1.0.0"
+    typed-rest-client "~1.1.2"
+
+"@stryker-mutator/html-reporter@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/html-reporter/-/html-reporter-1.1.0.tgz#157b8cf2c465a6d89daebb443deab2ec4e663d94"
+  integrity sha512-UWKILn9w3lPuj2AXOhlVid+R++Ya86zjWt1heWCjp0/dIj5IoCJUmwwmUYITWUEWBg/r8aiDjcH8uXuE0gA7tA==
+  dependencies:
+    "@stryker-mutator/api" "^1.1.0"
+    "@stryker-mutator/util" "^1.1.0"
+    file-url "~2.0.0"
+    lodash "~4.17.10"
+    mkdirp "~0.5.1"
+    mz "~2.7.0"
+    rimraf "~2.6.1"
+    typed-html "~1.0.0"
+
+"@stryker-mutator/jest-runner@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/jest-runner/-/jest-runner-1.1.0.tgz#07b02b34885095c45a959549fa184307555e26f6"
+  integrity sha512-twGQZxCc+STPx+LLXcgKfgL1pe4Vppu6KScn6lEApcGxhXHc+b5Yv9GdETaLcNWaOrfPH0WB6LhdS6TcsDgL1w==
+  dependencies:
+    "@stryker-mutator/api" "^1.1.0"
+    semver "~5.6.0"
+
+"@stryker-mutator/typescript@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/typescript/-/typescript-1.1.0.tgz#0fdc75f029c7767056d320be7aff206ab2a63319"
+  integrity sha512-9c7sWqbdoCm/Bevgxew0Ha13Scf7+D6qBoaNAd5qVX0AZk5LaW+nO22f7MCNynkvk3xUe5hVUaPj1HQn/WQYLw==
+  dependencies:
+    "@stryker-mutator/api" "^1.1.0"
+    "@stryker-mutator/util" "^1.1.0"
+    lodash.flatmap "~4.5.0"
+    semver "~5.6.0"
+    tslib "~1.9.3"
+
+"@stryker-mutator/util@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stryker-mutator/util/-/util-1.1.0.tgz#fd68508030dda0637adf80b8e4a392e443aa9443"
+  integrity sha512-iAAwOuQ+zhNfahjgwmOJmd07SFsVYNXLC25uqDN1UIQU1MTZO9/SP9cBAyJadHhQ5eCgCd4nE1culRQOuz0ydQ==
 
 "@types/accepts@^1.3.5":
   version "1.3.5"
@@ -1578,11 +1645,6 @@ ajv@^6.1.0, ajv@^6.5.5:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
-
-amdefine@>=0.0.4:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
-  integrity sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -3491,18 +3553,6 @@ escodegen@^1.9.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-escodegen@~1.8.0:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/escodegen/-/escodegen-1.8.1.tgz#5a5b53af4693110bebb0867aa3430dd3b70a1018"
-  integrity sha1-WltTr0aTEQvrsIZ6o0MN07cKEBg=
-  dependencies:
-    esprima "^2.7.1"
-    estraverse "^1.9.1"
-    esutils "^2.0.2"
-    optionator "^0.8.1"
-  optionalDependencies:
-    source-map "~0.2.0"
-
 eslint-scope@^4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.3.tgz#ca03833310f6889a3264781aa82e63eb9cfe7848"
@@ -3510,11 +3560,6 @@ eslint-scope@^4.0.0:
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
-
-esprima@^2.7.1, esprima@~2.7.0:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
-  integrity sha1-luO3DVd59q1JzQMmc9HDEnZ7pYE=
 
 esprima@^3.1.3:
   version "3.1.3"
@@ -3532,11 +3577,6 @@ esrecurse@^4.1.0:
   integrity sha512-64RBB++fIOAXPw3P9cy89qfMlvZEXZkqqJkjqqXIvzP5ezRZjW+lPWjw35UX/3EhUPFYbg5ER4JYgDw4007/DQ==
   dependencies:
     estraverse "^4.1.0"
-
-estraverse@^1.9.1:
-  version "1.9.3"
-  resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-1.9.3.tgz#af67f2dc922582415950926091a4005d29c9bb44"
-  integrity sha1-r2fy3JIlgkFZUJJgkaQAXSnJu0Q=
 
 estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
@@ -5933,7 +5973,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.11, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.2.1, lodash@~4.17.10, lodash@~4.17.4:
+lodash@4.17.11, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.5, lodash@^4.2.1, lodash@~4.17.10, lodash@~4.17.4:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
@@ -6421,7 +6461,7 @@ mute-stream@~0.0.4:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
-mz@^2.4.0, mz@^2.7.0, mz@~2.7.0:
+mz@^2.4.0, mz@~2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/mz/-/mz-2.7.0.tgz#95008057a56cafadc2bc63dde7f9ff6955948e32"
   integrity sha512-z81GNO7nnYMEhrGh9LeymoE4+Yr0Wn5McHIZMK5cfQCl+NDX08sCZgUc9/6MHni9IWuFLm1Z3HTCXu2z9fN62Q==
@@ -8281,13 +8321,6 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-source-map@~0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.2.0.tgz#dab73fbcfc2ba819b4de03bd6f6eaa48164b3f9d"
-  integrity sha1-2rc/vPwrqBm03gO9b26qSBZLP50=
-  dependencies:
-    amdefine ">=0.0.4"
-
 spdx-correct@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.0.tgz#fb83e504445268f154b074e218c87c003cd31df4"
@@ -8565,84 +8598,6 @@ strong-log-transformer@^2.0.0:
     minimist "^1.2.0"
     through "^2.3.4"
 
-stryker-api@^0.24.1:
-  version "0.24.1"
-  resolved "https://registry.yarnpkg.com/stryker-api/-/stryker-api-0.24.1.tgz#4d970a60a3c00101683df172a2dc7b182cab97d1"
-  integrity sha512-7ar/+f96KXokhy8sT8EotUjt0+7hyeMpDQTQklWwhOkT6EHWLGYA1VBnYsrkn/KfSzNF8i6lUArBIJnyyfkc7A==
-  dependencies:
-    tslib "~1.9.3"
-
-stryker-baseline-reporter@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/stryker-baseline-reporter/-/stryker-baseline-reporter-1.0.3.tgz#c127144796ce1896766840cd8c7f13c8202936b8"
-  integrity sha512-HAxHj3y8fUo04IgoRT5ibgH5ucBJd5tZ5q9wg/5UYlKLAHGTqoJsY4qp1IvEGE4Gb39mJEXUtQ7Ht0edGxxaaA==
-  dependencies:
-    chalk "^2.3.0"
-    lodash "^4.17.4"
-    mz "^2.7.0"
-    tempy "^0.2.1"
-
-stryker-html-reporter@^0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/stryker-html-reporter/-/stryker-html-reporter-0.18.1.tgz#5c4345492b3bb7549c7b4919f44d4541e7b7e807"
-  integrity sha512-vfc2UTbiFpsgFyJh/Ag3ZgZR4aJ/vUbcGX7CE7ES8X6wAVzYL8QZ6B2JdqRH6Lz8bY9hw6RvTwyHCwxf254DFg==
-  dependencies:
-    "@stryker-mutator/util" "^0.1.0"
-    file-url "~2.0.0"
-    lodash "~4.17.10"
-    mkdirp "~0.5.1"
-    mz "~2.7.0"
-    rimraf "~2.6.1"
-    stryker-api "^0.24.1"
-    typed-html "~1.0.0"
-
-stryker-jest-runner@^1.2.4:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/stryker-jest-runner/-/stryker-jest-runner-1.4.1.tgz#023c8bc83c179623f4cad8c88d9015608ee94c2f"
-  integrity sha512-LkFNqQ1ZDgjQ1TbYK6tcIhlxNU8a1JZc7T3gpkf+kbC/zwQMwYLTChuKWO69wpeQWXAdZjvV3ftpeiKYb3ZQog==
-  dependencies:
-    semver "~5.6.0"
-    stryker-api "^0.24.1"
-
-stryker-typescript@^0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/stryker-typescript/-/stryker-typescript-0.18.1.tgz#2667c3af1080e15ec557c0dee404ff863e20f502"
-  integrity sha512-NCVXzXIrfEA3vwVgyHBWs+IChWZt0Rzf9jtxBOgBnrbQ3KW/WnJww0zxHP2CXNMV8WQPDoWbBpnmdl1pOhJzkw==
-  dependencies:
-    "@stryker-mutator/util" "^0.1.0"
-    lodash.flatmap "~4.5.0"
-    semver "~5.6.0"
-    stryker-api "^0.24.1"
-    tslib "~1.9.3"
-
-stryker@^0.35.1:
-  version "0.35.1"
-  resolved "https://registry.yarnpkg.com/stryker/-/stryker-0.35.1.tgz#d5536e1cf189999015ac2cb6d15439b197496029"
-  integrity sha512-AJ2qcjPjke87LwHrzo+HfzuLJdhR2KCuNF5oT61+pL8SSGvXEOjU9nrvR+WbhBdtD+3A/3RC3bbYYbV2iQqXdg==
-  dependencies:
-    "@stryker-mutator/util" "^0.1.0"
-    chalk "~2.4.1"
-    commander "~2.19.0"
-    escodegen "~1.8.0"
-    esprima "~2.7.0"
-    get-port "~4.1.0"
-    glob "~7.1.2"
-    inquirer "~6.2.0"
-    istanbul-lib-instrument "~3.1.0"
-    lodash "~4.17.4"
-    log4js "~4.0.2"
-    mkdirp "~0.5.1"
-    prettier "~1.16.1"
-    progress "~2.0.0"
-    rimraf "~2.6.1"
-    rxjs "~6.3.0"
-    source-map "~0.6.1"
-    surrial "~1.0.0"
-    tree-kill "~1.2.0"
-    tslib "~1.9.3"
-    typed-inject "~1.0.0"
-    typed-rest-client "~1.1.2"
-
 subscriptions-transport-ws@^0.9.11:
   version "0.9.16"
   resolved "https://registry.yarnpkg.com/subscriptions-transport-ws/-/subscriptions-transport-ws-0.9.16.tgz#90a422f0771d9c32069294c08608af2d47f596ec"
@@ -8755,14 +8710,6 @@ temp-write@^3.4.0:
     pify "^3.0.0"
     temp-dir "^1.0.0"
     uuid "^3.0.1"
-
-tempy@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/tempy/-/tempy-0.2.1.tgz#9038e4dbd1c201b74472214179bc2c6f7776e54c"
-  integrity sha512-LB83o9bfZGrntdqPuRdanIVCPReam9SOZKW0fOy5I9X3A854GGWi0tjCqoXEk84XIEYBc/x9Hq3EFop/H5wJaw==
-  dependencies:
-    temp-dir "^1.0.0"
-    unique-string "^1.0.0"
 
 term-size@^1.2.0:
   version "1.2.0"
