@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "jest-cli": "^24.5.0",
+    "lerna": "^3.13.1",
+    "typescript": "^3.3.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
