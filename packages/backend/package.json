@@ -47,7 +47,7 @@
     "rxjs": "^6.2.2",
     "stompit": "^0.26.0",
     "stompjs": "^2.3.3",
-    "type-graphql": "^0.17.0",
+    "type-graphql": "^0.17.6",
     "typeorm": "^0.2.8",
     "typescript": "^3.5.3"
   },
