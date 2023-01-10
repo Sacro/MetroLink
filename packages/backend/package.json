@@ -40,7 +40,7 @@
     "jest-cli": "^24.8.0",
     "joi": "^14.0.1",
     "lerna": "^3.16.4",
-    "luxon": "^1.5.0",
+    "luxon": "^1.28.1",
     "nest-schedule": "^0.4.3",
     "pg": "^7.5.0",
     "reflect-metadata": "^0.1.12",
